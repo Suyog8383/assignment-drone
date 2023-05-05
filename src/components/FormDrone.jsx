@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useContext } from "react";
-import { createNewContext } from "./assignment-drone";
+import { createNewContext } from "../context/userProfileContext";
 
 function FormDrone() {
   const { userDetails, setUserDetails } = useContext(createNewContext);
-  console.log("@SN ", userDetails, setUserDetails);
+
   const handleNameChange = (e) => {
     setUserDetails({
       ...userDetails,
@@ -14,6 +14,7 @@ function FormDrone() {
       },
     });
   };
+
   const handlePlaceChange = (e) => {
     setUserDetails({
       ...userDetails,
@@ -24,7 +25,6 @@ function FormDrone() {
     });
   };
 
-  // update the number property
   const handleNumberChange = (e) => {
     setUserDetails({
       ...userDetails,
@@ -34,6 +34,7 @@ function FormDrone() {
       },
     });
   };
+
   return (
     <div>
       <div style={{ display: "flex", flexDirection: "column" }}>

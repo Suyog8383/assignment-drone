@@ -6,18 +6,13 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { createContext, useState } from "react";
+import { useState } from "react";
 import FormDrone from "./FormDrone";
 import QuestionDrone from "./QuestionDrone";
 import FinalDrone from "./FinalDrone";
+import { CreateNewContextProvider } from "../context/userProfileContext";
 
-const steps = [
-  "Select campaign settings",
-  "Create an ad group",
-  "Create an ad",
-];
-export const createNewContext = createContext(null);
-const CreateNewContextProvider = createNewContext.Provider;
+const steps = ["Basic Information", "Some Questions", "Final Result"];
 
 function AssignmentDrone() {
   const [activeStep, setActiveStep] = useState(0);
